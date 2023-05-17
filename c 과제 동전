@@ -1,0 +1,33 @@
+#include
+<stdlib.h>    /*난수 생성*/
+#include
+<stdio.h>
+#include   /* 매번 다른 난수 위해*/
+<time.h>
+int coin_toss   /*코인 함수 */
+(void);
+int main(void) /*메인 함수*/
+{
+int toss;
+int heads = 0;      /*  int 변수 지정 및 초기화 */
+int tails = 0;
+
+srand((unsigned)time(NULL));         /*난수 생성 코드(현재 시각 시드)*/
+for (toss = 0; toss < 100; toss++)     /*토스 초기화, 실행마다 1추가, 토스횟수 100미만까지 실행*/
+{
+if
+(coin_toss() == 1)     /* if 토스 결과 1이라면 heads에 1 추가*?
+heads++;
+
+else
+tails++;       /*그렇지 않다면 tails에 1 추가*/
+}
+printf("동전의 앞면: %d \n", heads);
+printf("동전의 뒷면: %d \n", tails);       /*head, tail 값 출력*/
+return 0;      /*반환*/
+}
+int coin_toss( void )
+{
+int head = rand() % 2;     /* 난수값 코드, 1.0을 앞 뒤 표현. head 반환*/
+return head;
+}
