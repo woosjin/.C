@@ -1,0 +1,12 @@
+#include <math.h> /* 수학 라이브러리 부르기*/
+#include <stdio.h>
+int main( void )
+{ 
+double pi = 3.1415926535;
+double x, y;
+x = pi / 2;        /*파이 2로 나누기*/
+y = sin( x );         /*sin 값 */
+printf( "sin( %f ) = %f\n", x, y ); 
+y = cos( x ); 
+printf( "cos( %f ) = %f\n", x, y ); 
+}
