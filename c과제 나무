@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <math.h>
+#include <stdio.h>
+int main(void)
+{
+double height, distance, tree_height, degrees, radians; ?*double형 변수*/
+printf("나무와의 길이(단위는 미터): ");
+scanf("%lf", &distance);
+
+printf("측정자의 키(단위는 미터): "); /*double이니 lf형*/
+scanf("%lf", &height);
+
+printf("각도(단위는 도): ");
+scanf("%lf", &degrees);
+radians = degrees * (3.141592 / 180.0); /* 1라디안 각도로 변환 위한 코드*/
+tree_height = tan(radians) * distance + height;
+printf("나무의 높이(단위는 미터): %lf \n", tree_height); /*높이 출력*/
+return 0;
+}
